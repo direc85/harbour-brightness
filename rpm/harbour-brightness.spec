@@ -1,6 +1,6 @@
 Name:       harbour-brightness
 
-Summary:    Brightness fix fo Xperia 10 III
+Summary:    Brightness fix for Xperia 10 III
 Version:    1.0
 Release:    1
 Group:      System
