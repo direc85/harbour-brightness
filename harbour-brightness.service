@@ -1,0 +1,14 @@
+[Unit]
+Description=Brightness fixer for Xperia 10III
+Documentation=https://forum.sailfishos.org/t/11659/
+After=ofono.service lipstick.service mce.service dbus.service
+Wants=mce.service
+AssertPathExists=/sys/devices/dsi_panel_driver/hbm_mode
+
+[Service]
+ExecStart=/usr/bin/harbour-brightness
+Restart=always
+RestartSec=15s
+
+[Install]
+WantedBy=graphical.target

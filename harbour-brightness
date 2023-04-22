@@ -1,0 +1,7 @@
+#!/bin/bash
+dbus-monitor --system sender=com.nokia.mce,interface=com.nokia.mce.signal,member=display_status_ind |
+while read -r line; do
+    if [[ "$line" == *"\"on\""* ]]
+        then echo 1 > /sys/devices/dsi_panel_driver/hbm_mode ; sleep 0.1 ; echo 0 > /sys/devices/dsi_panel_driver/hbm_mode;
+    fi
+done
